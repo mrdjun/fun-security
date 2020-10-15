@@ -1,0 +1,56 @@
+mybatis-plus:
+  # mapper映射文件路径
+  mapper-locations: classpath:/mybatis/*Mapper.xml
+  # 实体类路径
+  typeAliasesPackage: com.fun.auth.domain.*
+  global-config:
+    db-config:
+      # id 类型
+      id-type: auto
+    # 关闭 mp banner输出
+    banner: false
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+  # 当前应用名称
+  application:
+    name: fun-security
+  # 时间格式
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  # 数据源
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://192.168.19.128:3307/funlife?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&allowMultiQueries=true
+    username: root
+    password: root
+    hikari:
+      # 最小连接数
+      minimum-idle: 5
+      # 最大连接数
+      maximum-pool-size: 15
+      # 自动提交
+      auto-commit: true
+      # 获取连接池连接等待最大时长
+      idle-timeout: 30000
+      pool-name: funhikari
+      # 连接最长生存时间
+      max-lifetime: 1800000
+      # 连接超时时长
+      connection-timeout: 30000
+      # 连接测试查询
+      connection-test-query: select 1
+
+server:
+  port: 80
+
+rsa:
+  key:
+    public-key-path: c:\rsa.pub
+    private-key-path: c:\rsa

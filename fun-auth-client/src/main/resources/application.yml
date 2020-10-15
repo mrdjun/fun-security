@@ -1,0 +1,15 @@
+spring:
+  # 当前应用名称
+  application:
+    name: fun-security
+  # 时间格式
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+server:
+  port: 81
+
+rsa:
+  key:
+    public-key-path: c:\rsa.pub
