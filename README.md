@@ -24,7 +24,7 @@ spring securiry + jwt +rsa 实现 sso 单点登录
 	"loginName":"mrdjun",
 	"password":"mrdjun"
 }
-```
+``` 
 4、登录成功后，在 header 中可以拿到 token ，复制出来；
 ![login-success](./ScreenShot/login-success.jpg)
 
